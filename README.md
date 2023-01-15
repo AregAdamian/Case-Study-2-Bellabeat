@@ -1,5 +1,6 @@
 # Case-Study-2-Bellabeat
 Case study from the Google Data Analytics Certificate program
+Data source: https://www.kaggle.com/datasets/arashnic/fitbit
 
 ## Data Preparation
 Looked at the data within Excel to identify how tables will be connected.
@@ -9,6 +10,8 @@ I noticed and confirmed that the merged file appropriately merged the individual
 I alter determined max/min values for the appropriate columns and sorted them to determine any outliers. This determination helps with identifying the filters during the data cleaning process. There were some observations in the data that didn't quite make sense such as a high sedentary time but also a high step and calorie count, which is paradoxical. However, the filters applied took out most of these observations, and thus I left the rest in there since it didn't affect my overall results.
 
 The weight log file was pretty straightforward. I noticed it also had an ID column, which was perfect as a key to link my two tables together. While I didn't notice this in my data preparation, going through my analysis, I went back in Excel and confirmed that there was only weight data for 8 of the individuals. This was disappointing since I couldn't identify any weight trends with confidence due to the very low sample size.
+
+All the minute and hourly data couldn't be uploaded into BigQuery and merging them was taking too long for it to even work, so I unfortunately couldn't use these data sets and stuck with the daily ones instead.
 
 Once I understood and had confidence in my data, I went to clean it in SQL.
 
